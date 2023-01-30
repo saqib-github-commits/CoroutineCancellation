@@ -10,7 +10,6 @@ fun coroutineCancellationWithAwaitBeforeCancel() {
                 println("Child Coroutine, counter: $it")
                 delay(500L)
             }
-            return@async 1
         }
         job.invokeOnCompletion {
             println("Parent Job completed")
